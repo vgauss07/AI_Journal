@@ -4,7 +4,7 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langgraph.prebuilt import create_react_agent
 from langgraph_core.messages.ai import AIMessage
 
-from app.config.settings import settings
+# from app.config.settings import settings
 
 
 def get_response_from_agents(llm_id, query, allow_search, system_prompt):
@@ -25,6 +25,7 @@ def get_response_from_agents(llm_id, query, allow_search, system_prompt):
 
     messages = response.get("messages")
 
-    ai_messages = [message.content for message in messages if isinstance(message, AIMessage)]
+    ai_messages = [message.content for message in messages
+                   if isinstance(message, AIMessage)]
 
     return ai_messages[-1]   # return the latest message
