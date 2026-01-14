@@ -1,7 +1,7 @@
 import streamlit as st
 import requests   # to send http post right in the back end
 
-from app.config.setting import settings
+from app.config.settings import settings
 from app.common.logger import get_logger
 from app.common.custom_exception import CustomException
 
@@ -11,7 +11,7 @@ st.set_page_config(page_title='AI Agent Advisor', layout='centered')
 st.title('Multi AI Agent  Advisor')
 
 system_prompt = st.text_area("Define your AI Agent: ", height=70)
-selected_model = st.selectbox(f"Select an AI Model: {settings.ALLOWED_MODELS}")
+selected_model = st.selectbox("Select an AI Model: ", settings.ALLOWED_MODELS)
 
 
 allowed_web_search = st.checkbox("Allow Web Search")
@@ -26,7 +26,7 @@ if st.button("Ask Agent") and user_query.strip():
         "model_name": selected_model,
         "system_prompt": system_prompt,
         "messages": [user_query],
-        "allowed_search": all
+        "allowed_search": allowed_web_search
     }
 
     # Box to send the backend to the frontend
@@ -50,4 +50,4 @@ if st.button("Ask Agent") and user_query.strip():
 
     except Exception as e:
         logger.error("Error sending request to backend")
-        raise CustomException("Error sending request", e)
+        st.error(str(CustomException("Failed to commmunicate to backend", e)))

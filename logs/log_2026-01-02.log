@@ -1,0 +1,16 @@
+2026-01-02 00:44:47,120 - INFO - Starting Backend Service
+2026-01-02 00:44:49,124 - INFO - Starting Frontend Service
+2026-01-02 00:45:45,483 - INFO - Starting Backend Service
+2026-01-02 00:45:47,483 - INFO - Starting Frontend Service
+2026-01-02 00:48:25,312 - INFO - Starting Backend Service
+2026-01-02 00:48:27,316 - INFO - Starting Frontend Service
+2026-01-02 00:56:50,646 - INFO - Sending Request to the backend
+2026-01-02 00:56:50,653 - ERROR - Error sending request to backend
+2026-01-02 01:05:27,922 - INFO - Starting Backend Service
+2026-01-02 01:05:29,927 - INFO - Starting Frontend Service
+2026-01-02 14:31:37,482 - INFO - Sending Request to the backend
+2026-01-02 14:31:37,518 - ERROR - Error sending request to backend
+2026-01-02 14:33:31,630 - INFO - Starting Backend Service
+2026-01-02 14:33:33,633 - INFO - Starting Frontend Service
+2026-01-02 14:33:52,932 - INFO - Sending Request to the backend
+2026-01-02 14:33:52,952 - ERROR - Error sending request to backend

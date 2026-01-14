@@ -29,7 +29,7 @@ def chat_endpoint(request: RequestState):
 
     if request.model_name not in settings.ALLOWED_MODELS:
         logger.warning("Invalid model name")
-        raise HTTPException(status_code=40, detail="Invalid model name")
+        raise HTTPException(status_code=400, detail="Invalid model name")
 
     try:
         response = get_response_from_agents(
